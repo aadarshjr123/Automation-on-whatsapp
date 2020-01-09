@@ -1,7 +1,10 @@
-from selenium import webdriver
+try:
+  from selenium import webdriver
+except ImportError:
+    print('\nError: Module Selenium not found!\n\nPress any key to continue...')
+    x=input()
+    exit(1)
 from time import sleep
-
-
 driver = webdriver.Chrome()
 driver.get('https://web.whatsapp.com')
 
