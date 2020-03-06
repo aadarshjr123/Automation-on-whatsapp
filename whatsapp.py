@@ -1,18 +1,24 @@
-from selenium import webdriver
+try:
+   from selenium import webdriver
+except ImportError:
+    print('\nError: Module Selenium not found!\n\nPress any key to continue...')
+    x=input()
+    exit(1)
+    
 from time import sleep
 
 
 driver = webdriver.Chrome()
-driver.get('http://web.whatsapp.com')
+driver.get('https://web.whatsapp.com')
 
 
-name = raw_input('Enter the name:')
-msg=raw_input('Enter the message:')
+name = input('Enter the name:')
+msg= input('Enter the message:')
 count = int(input('Enter the count:'))
-filepath = raw_input('Enter your filepath (images/video):')
+filepath = input('Enter your filepath (images/video):')
 
 
-raw_input('Enter anything after scan')
+ch=input('Enter anything after scan')
 
 
 user= driver.find_element_by_xpath('//span[@title = "{}"]'.format(name)).click()
