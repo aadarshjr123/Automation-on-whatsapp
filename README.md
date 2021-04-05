@@ -1,5 +1,5 @@
 ## Automation-on-whatsapp
 
-# Its an code using selenium for the automation of whatsapp application.
+Its an script using selenium for the automation of whatsapp application.
 
-# Its made for study purpose only.
+Its made for study purpose only.
